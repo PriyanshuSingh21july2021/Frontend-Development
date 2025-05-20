@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inherit Property Example</title>
+    <style>
+        /* Parent div style */
+        div {
+            font-size: 20px;
+            color: blue;
+            background-color: aqua;
+        }
+
+        /* Input will inherit the font-size and color from its parent */
+        input {
+            background-color: inherit;
+            font-size: inherit;
+            color: inherit;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+    </div>
+
+</body>
+</html>
+<!-- 
+ Note : child always try inherit property of father -->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Background Image</title>
+    <style>
+        body {
+            margin: 0; /* Reset any default body margins */
+            padding: 0;
+        }
+
+        .container {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg/1200px-Altja_j%C3%B5gi_Lahemaal.jpg");
+            background-size: 500px 600px; /* Scale the image to cover the container */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Keeps the image fixed while scrolling */
+            background-position:center; /* Centers the image */
+            margin: 30px; /* Space around the container */
+            padding: 20px; /* Optional padding inside the container */
+            height: calc(100vh - 60px); /* Adjust height to fit the viewport minus margins */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Your content goes here -->
+    </div>
+</body>
+</html>

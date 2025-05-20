@@ -1,0 +1,65 @@
+
+
+
+
+
+<!--*****-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+       .container{
+        height: 300px;
+        width: 80%;
+        background-color: azure;
+        margin: 10px auto;
+        border: 2px solid black;
+
+        display: flex;
+        flex-direction: row column  row-reverse column-reverse;
+        justify-content: space-between center flex-end flex-end;
+        flex-wrap:nowrap wrap;
+        align-items:flex-end flex-start center ;
+        align-content: center;
+        align-self: start;
+        flex-basis: 100px;
+       }
+       h1{
+        text-align: center;
+       }
+       .container div{
+        height: 100px;
+        width: 300px;
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        
+       }
+        
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Flex box</h1>
+        <div class="container">
+            <div class="item item1" style="background-color: red;">Red</div>
+            <div class="item" style="background-color: orange;">Orange</div>
+            <div class="item" style="background-color: yellow;">Yellow</div>
+            <div class="item order-1" style="background-color: green;">Green</div>
+            <div class="item" style="background-color: blue;">Blue</div>
+            <div class="item" style="background-color: indigo;">Indigo</div>
+            <div class="item" style="background-color: violet;">Violet</div>
+            
+        </div>
+        
+    </main>
+
+</body>
+
+</html>

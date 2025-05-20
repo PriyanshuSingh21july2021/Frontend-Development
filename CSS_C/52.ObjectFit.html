@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS object Fit and position</title>
+    <style>
+        .container {
+            height: 488px;
+            width: 466px;
+            border: 2px solid black;
+            border-radius: 50%; /* Make the container circular */
+            overflow: hidden; /* Clip the content to the circular shape */
+        }
+
+        img {
+            width: 100%; /* Ensure the image fills the container */
+            height: 100%; /* Ensure the image fills the container */
+            object-fit: cover; /* Maintain aspect ratio while covering the container */
+            object-position: center; /* Center the image within the container */
+          /*  transform: rotate(deg);  Rotate the image */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg" alt="">
+    </div>
+</body>
+
+</html>

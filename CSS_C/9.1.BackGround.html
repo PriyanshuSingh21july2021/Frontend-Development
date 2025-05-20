@@ -1,0 +1,53 @@
+<!--*****-->
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .showcase-area {
+        height: 50vh;
+        background: linear-gradient(
+            rgba(240, 240, 240, 0.144),
+            rgba(255, 255, 255, 0.336)
+          ),
+          url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .showcase-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 1.6rem;
+      }
+
+      .main-title {
+        text-transform: uppercase;
+        margin-top: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="showcase-area" id="showcase">
+      <div class="showcase-container">
+        <h1 class="main-title" id="home">Eat Right Food</h1>
+        <p>Eat Healty, it is good for our health.</p>
+        <input
+          type="text"
+          id="search"
+          name="q"
+          placeholder="Search your resturant..."
+          style="border: 2px solid #ccc; border-radius: 15px; padding: 10px"
+        />
+      </div>
+    </section>
+    
+  </body>
+</html>

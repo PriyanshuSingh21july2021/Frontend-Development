@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Box styling */
+    .box {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      margin: 10px;
+      border: 2px solid #000;
+      background-color: lightblue;
+      color: black;
+    }
+
+    /* Static position (default behavior) */
+    .static-box {
+      position: static;
+    }
+
+    /* Relative positioning */
+    .relative-box {
+      position: relative;
+      top: 20px; /* Moves 20px down from its normal position */
+      left: 20px; /* Moves 20px right from its normal position */
+      background-color: lightgreen;
+    }
+
+    /* Absolute positioning */
+    .absolute-box {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      background-color: lightcoral;
+    }
+
+    /* Fixed positioning */
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: lightyellow;
+    }
+
+    /* Sticky positioning */
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background-color: lightpink;
+    }
+
+    /* Container for absolute box example */
+    .container {
+      position: relative;
+      height: 200px;
+      border: 2px dashed grey;
+      margin-top: 20px;
+    }
+  </style>
+  <title>Box Model with Positioning</title>
+</head>
+<body>
+
+  <div class="box static-box">Static Box (default)</div>
+  <div class="box relative-box">Relative Box</div>
+  
+  <div class="container">
+    <div class="box absolute-box">Absolute Box (within container)</div>
+  </div>
+
+  <div class="box fixed-box">Fixed Box (always visible)</div>
+  <div class="box sticky-box">Sticky Box (sticks at the top)</div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <style>
+        /* 1. Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. Type/tag Selector /element*/
+        h1 {
+            color: darkblue;
+            color: #555 !important;
+        }
+
+        /* 3. Class Selector */
+        .intro {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* 4. ID Selector */
+        #main-content {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* 5. Descendant Selector */
+        #main-content p {
+            margin-bottom: 50px;
+        }
+
+        /* 6. Child Selector */
+        #main-content > p {
+            color: darkgreen;
+        }
+
+        /* 7. Adjacent Sibling Selector */
+        h2 + p {
+            font-style: italic;
+        }
+
+        /* 8. General Sibling Selector */
+        h2 ~ p {
+            color: darkred;
+        }
+
+        /* 9. Attribute Selector */
+        a[href^="https"] {
+            color: darkorange;
+        }
+
+        /* 10. Pseudo-class Selector */
+        /* hover ,active checked,:nth-child() */
+        a:hover {
+            text-decoration: underline;
+            color: aqua;
+        }
+
+        /* 11. Pseudo-element Selector */
+        p::first-line {
+            font-weight: bold;
+        }
+
+        /* 12. Grouping Selector */
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+
+
+         /* Target the input field with type="text" */
+         input[type="text"] {
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+         }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors Example</h1>
+
+    <div id="main-content">
+        <h2>Introduction to Selectors</h2>
+        <p class="intro">Selectors are used to target HTML elements for styling.</p>
+        <p>This is an example of different types of CSS selectors.</p>
+        <p>They allow you to apply specific styles to specific elements or groups of elements.</p>
+        <a href="https://example.com">Example Link</a>
+        <a href="https://another.com">Another Example Link</a>
+    </div>
+
+    <p>General sibling example paragraph.</p>
+    <p>This paragraph also demonstrates sibling selectors.</p>   <br> <br>
+
+
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    
+    <br><br>
+
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male">
+    
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female">
+</body>
+</html>
