@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>getElementsByTagName Example</title>
+    <style>
+        /* Define CSS styles for <p> elements */
+        p {
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid blue;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+    <script>
+        // Select all <p> elements
+        const paragraphs = document.getElementsByTagName('p');
+
+        // Apply styles directly to each <p> element
+        paragraphs[0].style.backgroundColor = 'lightblue';
+        paragraphs[0].style.padding = '10px';
+        paragraphs[0].style.border = '1px solid blue';
+        paragraphs[0].style.fontFamily = 'Arial, sans-serif';
+        paragraphs[0].style.fontSize = '16px';
+        paragraphs[0].style.color = 'white';
+
+        paragraphs[1].style.backgroundColor = 'yellow';
+        paragraphs[1].style.padding = '10px';
+        paragraphs[1].style.border = '1px solid blue';
+        paragraphs[1].style.fontFamily = 'Arial, sans-serif';
+        paragraphs[1].style.fontSize = '16px';
+        paragraphs[1].style.color = 'white';
+
+        paragraphs[2].style.backgroundColor = 'green';
+        paragraphs[2].style.padding = '10px';
+        paragraphs[2].style.border = '1px solid blue';
+        paragraphs[2].style.margin = '2px';
+        paragraphs[2].innerText='THis my my paragraph priyanshu kumar Singh'
+
+    </script>
+</body>
+</html>

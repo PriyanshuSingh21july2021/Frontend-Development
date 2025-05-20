@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       // 1. Implicit Type Conversion (Type Coercion)
+// JavaScript automatically converts data types in certain situations.
+
+// Example 1: String + Number
+let result1 = '5' + 2;  // '52' (2 is converted to string '2')
+
+// Example 2: Boolean + Number
+let result2 = 5 + true; // 6 (true is converted to 1)
+
+// Example 3: Boolean in Logical Operations
+let result3 = 5 || 0;   // 5 (since 5 is truthy, it returns 5)
+let result4 = 0 || false; // false (since both values are falsy)
+
+// Example 4: Comparison Operator (`==` vs `===`)
+let result5 = 2 == '2';   // true (string '2' is coerced into number 2)
+let result6 = 2 === '2';  // false (no type conversion, so types mismatch)
+
+
+
+
+
+// 2. Explicit Type Conversion (Manual Conversion)
+// JavaScript provides built-in functions for converting data types.
+
+// Example 1: String to Number Conversion
+// You can convert strings to numbers using `Number()`, `parseInt()`, or `parseFloat()`.
+let str = '123';
+let num1 = Number(str);     // 123 (converts string to number)
+let num2 = parseInt(str);   // 123 (also converts string to integer)
+let num3 = parseFloat('123.45'); // 123.45 (converts string to float)
+
+// Example 2: Number to String Conversion
+// Convert numbers to strings using `String()` or `.toString()`.
+let num4 = 456;
+let str1 = String(num4);    // '456' (converts number to string)
+let str2 = num4.toString(); // '456' (also converts number to string)
+
+// Example 3: Boolean Conversion
+// Convert any value to a boolean using `Boolean()`.
+let bool1 = Boolean(0);       // false (0 is falsy)
+let bool2 = Boolean(1);       // true (1 is truthy)
+let bool3 = Boolean('');      // false (empty string is falsy)
+let bool4 = Boolean('text');  // true (non-empty string is truthy)
+
+// Example 4: String to Boolean Conversion
+// An empty string converts to `false`, while any non-empty string converts to `true`.
+let bool5 = Boolean('');        // false (empty string)
+let bool6 = Boolean('Hello');   // true (non-empty string)
+
+// 3. Special Cases of Type Conversion
+
+// Case 1: Null Conversion
+// `null` converts to 0 in numeric contexts and to `false` in boolean contexts.
+let nullToNumber = Number(null); // 0 (null is coerced to 0)
+let nullToBoolean = Boolean(null); // false (null is falsy)
+
+// Case 2: Undefined Conversion
+// `undefined` converts to `NaN` (Not-a-Number) in numeric contexts and `false` in boolean contexts.
+let undefinedToNumber = Number(undefined); // NaN
+let undefinedToBoolean = Boolean(undefined); // false
+
+// Case 3: Arrays and Objects Conversion
+// Arrays and objects convert to strings by calling their `.toString()` method.
+let arrayToString = [1, 2, 3].toString(); // "1,2,3" (converts array to a string)
+let objectToString = { key: 'value' }.toString(); // "[object Object]" (converts object to string)
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!-- ***** -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Registration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        width: 400px;
+      }
+
+      .registration-form {
+        padding: 20px;
+      }
+
+      .registration-form h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      .registration-form label {
+        display: block;
+        margin: 10px 0 5px;
+        color: #666;
+      }
+
+      .registration-form input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      .registration-form button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .registration-form button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+        <form class="registration-form" onsubmit="return validateForm()">
+            <h2>Restaurant Registration</h2>
+
+            <label for="restaurantName">User Name:</label>
+            <input type="text" id="restaurantName" name="restaurantName" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required />
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required />
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var restaurantName = document.getElementById("restaurantName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var location = document.getElementById("location").value;
+            var phone = document.getElementById("phone").value;
+
+            // Username validation
+            if (!isOnlyCharacters(restaurantName)) {
+                alert("Username should contain only characters.");
+                return false;
+            }
+
+            // Email validation
+            if (!isValidEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Password validation
+            if (!isValidPassword(password)) {
+                alert("Password must be at least 6 characters long and contain at least one number, one uppercase letter, one lowercase letter, and one special character.");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Location validation
+            if (!isOnlyCharacters(location)) {
+                alert("Location should contain only characters.");
+                return false;
+            }
+
+            // Phone number validation
+            if (!isValidPhoneNumber(phone)) {
+                alert("Phone number should contain only numbers.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Function to validate if the string contains only characters
+        function isOnlyCharacters(str) {
+            return /^[A-Za-z]+$/.test(str);
+        }
+
+        // Function to validate email format
+        function isValidEmail(email) {
+            var emailRegex = /\S+@\S+\.\S+/;
+            return emailRegex.test(email);
+        }
+
+        // Function to validate password format
+        function isValidPassword(password) {
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[a-zA-Z\d!@#$%^&*(),.?":{}|<>]{6,}$/;
+            return passwordRegex.test(password);
+        }
+
+        // Function to validate phone number format
+        function isValidPhoneNumber(phone) {
+            var phoneRegex = /^\d+$/;
+            return phoneRegex.test(phone);
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- ***** -->

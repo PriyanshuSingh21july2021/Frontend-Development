@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+    <button>click me</button>
+   </div>
+    
+
+   <script>
+    const div=document.querySelector('div');
+    const button=document.querySelector('button');
+
+    div.addEventListener('click',()=>{
+        console.log('div clicked');
+    })
+
+    button.addEventListener('click',()=>{
+        console.log('button clicked');
+    })
+   </script>
+</body>
+</html>
+
+<!-- child to parent -->
+<!-- 
+Event Bubbling happens when an event on a child element triggers and then passes to its parent and ancestors. This lets parent elements handle the same event automatically.
+
+It is part of the event propagation mechanism in JavaScript, where events flow in two phases: capturing phase (downward) and bubbling phase (upward)
+-->

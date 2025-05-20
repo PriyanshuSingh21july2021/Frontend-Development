@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText Example</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="example1">
+        Hello, <span class="hidden">Invisible Text</span> Priyanshu!
+    </div>
+
+    <script>
+        const element = document.getElementById("example1");
+        console.log(element.innerText);  // Output: "Hello, Priyanshu!"
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML Example</title>
+</head>
+<body>
+    <div id="example2">Welcome, <b>Priyanshu</b>!</div>
+
+    <script>
+        const element = document.getElementById("example2");
+        console.log(element.innerHTML);  // Output: Welcome, <b>Priyanshu</b>!
+
+        // Changing content using innerHTML
+        element.innerHTML = "Hi, <i>Priyanshu Kumar Singh</i>!";
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent Example</title>
+</head>
+<body>
+    <div id="example3">Hello, <b>Priyanshu</b>!</div>
+
+    <script>
+        const element = document.getElementById("example3");
+        console.log(element.textContent);  // Output: Hello, Priyanshu!
+
+        // Changing text content using textContent
+        element.textContent = "Hi, Priyanshu!";
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversing Example</title>
+    <style>
+        #parent {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+        .child {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        <div id="child1" class="child">Child 1</div>
+        <div id="child2" class="child">Child 2</div>
+        <div id="child3" class="child">Child 3</div>
+    </div>
+
+    <script>
+        // Accessing the parent element
+        let parent = document.getElementById("parent");
+        console.log("Parent Element:", parent);
+
+        // Accessing first and last child elements
+        console.log("First Child Element:", parent.firstElementChild);  // Logs: Child 1
+        console.log("Last Child Element:", parent.lastElementChild);   // Logs: Child 3
+
+        // Traversing siblings
+        let child2 = document.getElementById("child2");
+        console.log("Previous Sibling of Child 2:", child2.previousElementSibling); // Logs: Child 1
+        console.log("Next Sibling of Child 2:", child2.nextElementSibling);     // Logs: Child 3
+
+        // Traversing to parent
+        console.log("Parent of Child 2:", child2.parentElement);  // Logs: Parent div
+
+        // Accessing all child nodes (including text nodes)
+        console.log("All Child Nodes of Parent:", parent.childNodes); // Includes text nodes
+
+        // Accessing only child elements (excluding text nodes)
+        console.log("All Child Elements of Parent:", parent.children);  // Logs: [Child 1, Child 2, Child 3]
+
+        // Accessing the closest matching ancestor with a specific class
+        let closestParent = child2.closest("#parent");
+        console.log("Closest Ancestor with ID 'parent':", closestParent); // Logs: Parent div
+
+        // Accessing first and last child nodes (includes text nodes)
+        console.log("First Child Node:", parent.firstChild);
+        console.log("Last Child Node:", parent.lastChild);
+
+        // Accessing next and previous sibling nodes (includes text nodes)
+        console.log("Previous Sibling Node of Child 2:", child2.previousSibling);
+        console.log("Next Sibling Node of Child 2:", child2.nextSibling);
+    </script>
+
+</body>
+</html>

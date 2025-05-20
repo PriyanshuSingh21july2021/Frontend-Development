@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .display {
+            font-size: 24px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            text-align: right;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 10px;
+        }
+        .buttons button {
+            padding: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #d3d3d3;
+        }
+        .buttons button.operator {
+            background-color: #f7b731;
+        }
+        .buttons button.equals {
+            background-color: #4cd137;
+        }
+        .buttons button.clear {
+            background-color: #ff3f34;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="setOperation('+')">+</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="setOperation('-')">-</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="setOperation('*')">*</button>
+
+            <button onclick="appendNumber('0')">0</button>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="equals" onclick="calculate()">=</button>
+            <button class="operator" onclick="setOperation('/')">/</button>
+        </div>
+    </div>
+
+    <script>
+        let currentNumber = '';
+let previousNumber = '';
+let operation = undefined;
+
+const display = document.getElementById('display');
+
+function appendNumber(number) {
+    if (currentNumber.includes('.') && number === '.') return;
+    currentNumber += number;
+    updateDisplay();
+}
+
+function updateDisplay() {
+    display.innerText = currentNumber;
+}
+
+function setOperation(op) {
+    if (currentNumber === '') return;
+    if (previousNumber !== '') {
+        calculate();
+    }
+    operation = op;
+    previousNumber = currentNumber;
+    currentNumber = '';
+}
+
+function calculate() {
+    let result;
+    const prev = parseFloat(previousNumber);
+    const curr = parseFloat(currentNumber);
+    if (isNaN(prev) || isNaN(curr)) return;
+    switch (operation) {
+        case '+':
+            result = prev + curr;
+            break;
+        case '-':
+            result = prev - curr;
+            break;
+        case '*':
+            result = prev * curr;
+            break;
+        case '/':
+            result = prev / curr;
+            break;
+        default:
+            return;
+    }
+    currentNumber = result;
+    operation = undefined;
+    previousNumber = '';
+    updateDisplay();
+}
+
+function clearDisplay() {
+    currentNumber = '';
+    previousNumber = '';
+    operation = undefined;
+    updateDisplay();
+}
+
+updateDisplay();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulate Class using classList</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="example">Hello, Priyanshu!</h1>
+    <button id="addClass">Add Class</button>
+    <button id="removeClass">Remove Class</button>
+    <button id="toggleClass">Toggle Class</button>
+
+    <script>
+        const heading = document.getElementById("example");
+
+        // Add class 'red' and 'bold' when button is clicked
+        document.getElementById("addClass").addEventListener("click", function() {
+            heading.classList.add("red", "bold");
+        });
+
+        // Remove class 'red' and 'bold' when button is clicked
+        document.getElementById("removeClass").addEventListener("click", function() {
+            heading.classList.remove("red", "bold");
+        });
+
+        // Toggle class 'green' when button is clicked
+        document.getElementById("toggleClass").addEventListener("click", function() {
+            heading.classList.toggle("green");
+        });
+
+        // Check if element contains a class
+        if (heading.classList.contains("red")) {
+            console.log("The element has the class 'red'");
+        } else {
+            console.log("The element does not have the class 'red'");
+        }
+    </script>
+</body>
+</html>

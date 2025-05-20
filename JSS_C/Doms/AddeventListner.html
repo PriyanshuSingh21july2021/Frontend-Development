@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>addEventListener Example</title>
+</head>
+<body>
+  <h1>Click the button to change text</h1>
+  <button id="myButton">Click Me!</button>
+  <p id="message">This text will change</p>
+
+  <script>
+    // Definition: addEventListener is a method that allows you to attach event handlers to HTML elements. 
+    // It listens for a specific event (like 'click', 'mouseover', etc.) and executes a function when the event occurs.
+
+    // Why use it?
+    // It enables better separation of HTML and JavaScript, making code modular and reusable.
+    // You can also attach multiple event listeners to the same element without overwriting existing ones.
+
+    // Selecting the button element
+    const button = document.getElementById('myButton');
+    const message = document.getElementById('message');
+
+    // Adding an event listener to the button
+    button.addEventListener('click', function() {
+      // This code will execute when the button is clicked
+      message.textContent = 'The text has been changed!';
+      button.textContent = 'Clicked!';
+    });
+
+    // Example of adding another event listener to the same element
+    button.addEventListener('mouseover', function() {
+      button.style.backgroundColor = 'lightblue';
+    });
+
+    button.addEventListener('mouseout', function() {
+      button.style.backgroundColor = '';  // Reset background color on mouse out
+    });
+  </script>
+</body>
+</html>

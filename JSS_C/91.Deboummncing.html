@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <input type="text" name="" id="" onkeyup="getdata()">
+
+    
+    <script>
+        let counter = 0;
+    
+        function getdata() {
+            console.log("Fetching data: " + counter++);
+        }
+    
+        function myDebounce(call, d) {
+            let timer;
+            return function (...args) {
+                if (timer) clearTimeout(timer);
+                timer = setTimeout(() => {
+                    call(...args); // Correctly pass the arguments
+                }, d);
+            };
+        }
+    
+        const Betterfunction = myDebounce(getdata, 1000);
+    
+        // Example usage: Triggering the debounced function
+        document.addEventListener('click', Betterfunction); // Call on a click event
+    </script>
+    
+</body>
+</html>

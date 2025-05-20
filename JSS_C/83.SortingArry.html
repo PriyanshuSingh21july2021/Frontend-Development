@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr = [2, 1, 5, 8, 12, 45, 10, 19];
+    
+    for (let i = 0; i < arr.length; i++) { // Iterate through all elements except the last one
+      for (let j = 0; j < arr.length - i - 1; j++) { // Iterate through the unsorted portion of the array
+        if (arr[j] > arr[j + 1]) { // Compare adjacent elements
+          // Swap if the current element is greater than the next
+          let temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+    console.log(arr); // Log the array after sorting is complete
+</script>
+
+
+  
+</body>
+</html>

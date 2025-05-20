@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Manipulation Example</title>
+</head>
+<body>
+
+    <h1 id="main-heading" class="heading" title="This is a heading">Hello, DOM!</h1>
+    <button id="changeButton">Change Attributes</button>
+    <button id="removeButton">Remove Attribute</button>
+
+    <script>
+        // Select the element
+        let heading = document.getElementById("main-heading");
+
+        // Get the value of the 'title' attribute
+        console.log("Initial title:", heading.getAttribute("title")); // Logs: This is a heading
+
+        // Set a new 'title' and 'class' attribute
+        document.getElementById("changeButton").addEventListener("click", function() {
+            heading.setAttribute("title", "New title for the heading");
+            heading.setAttribute("class", "new-heading-class");
+            console.log("Updated title:", heading.getAttribute("title")); // Logs: New title for the heading
+            console.log("Updated class:", heading.getAttribute("class")); // Logs: new-heading-class
+        });
+
+        // Remove the 'title' attribute
+        document.getElementById("removeButton").addEventListener("click", function() {
+            heading.removeAttribute("title");
+            console.log("Title attribute removed.");
+        });
+    </script>
+
+</body>
+</html>

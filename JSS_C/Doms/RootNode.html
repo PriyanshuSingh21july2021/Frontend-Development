@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Node Example</title>
+</head>
+<body>
+    <div id="root">
+        <p>Child paragraph 1</p>
+        <p>Child paragraph 2</p>
+    </div>
+
+    <script>
+        // Access the root node
+        const rootNode = document.getElementById('root');
+
+        // Access child nodes of the root node
+        const childNodes = rootNode.childNodes;
+        console.log('Child nodes of the root node:');
+        childNodes.forEach(node => console.log(node));
+
+        // Access the parent node of the root node
+        const parentNode = rootNode.parentNode;
+        console.log('Parent node of the root node:');
+        console.log(parentNode);
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+    <button>click me</button>
+   </div>
+    
+
+   <!-- <script>
+   //    event capturing
+    const div=document.querySelector('div');
+    const button=document.querySelector('button');
+
+    div.addEventListener('click',()=>{
+        console.log('div clicked');
+    },true)
+
+ 
+    button.addEventListener('click',(event)=>{
+        event.stopImmediatePropagation();
+        console.log('button clicked');
+    },)
+
+   </script> -->
+
+
+<!-- <script>
+
+   // stopPropagation
+    const div = document.querySelector('div');
+    const button = document.querySelector('button');
+
+    // Event listener on div
+    div.addEventListener('click', () => {
+        console.log('div clicked');
+    }); // Capturing phase
+
+    // Event listener on button
+    button.addEventListener('click', (event) => {
+        event.stopPropagation();  // Prevents further propagation
+        console.log('button clicked');
+    });
+
+   </script> -->
+   
+   <script>
+    //stopImmediatePropagation
+    const div = document.querySelector('div');
+    const button = document.querySelector('button');
+
+    // Event listener on div (parent)
+    div.addEventListener('click', () => {
+        console.log('div clicked');
+    });
+
+    // First event listener on button
+    button.addEventListener('click', (event) => {
+        event.stopImmediatePropagation();  // Prevents further propagation
+        console.log('First button clicked');
+    });
+
+    // Second event listener on button
+    button.addEventListener('click', (event) => {
+        event.stopImmediatePropagation();  // Prevents further propagation
+        console.log('Second button clicked');
+    });
+
+    // Third event listener on button
+    button.addEventListener('click', (event) => {
+        event.stopImmediatePropagation();  // Prevents further propagation
+        console.log('Third button clicked');
+    });
+   </script>
+
+</body>
+</html>
+
+<!-- 
+Parent - child 
+-->
+
+<!-- Event Capturing is when an event starts at the top (parent elements) and goes down to the target element. It lets parent elements handle the event first. -->
+
+<!-- Yes, event.stopPropagation() can be used to stop the parent event action. When called on a child element’s event listener, it prevents the event from bubbling up to the parent element, -->
+
+<!-- Use stopImmediatePropagation() when you want to control the event flow, either to stop multiple event handlers from running on the same element or to prevent the event from reaching parent elements. -->

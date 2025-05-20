@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    /* Common styles for all boxes */
+    #div1, #div2, #div3, #div4, #div5, #div6, #div7 {
+        border: 3px solid black;
+        height: 100px;
+        width: 500px;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+   </style>
+</head>
+<body>
+
+    <div id="div1">Box1</div>
+    <div id="div2">Box2</div>
+    <div id="div3">Box3</div>
+    <div id="div4">Box4</div>
+    <div id="div5">Box5</div>
+    <div id="div6">Box6</div>
+    <div id="div7">Box7</div>
+
+    <script>
+        // Access each element using querySelector by its ID and change the inner text
+        document.querySelector('#div1').innerText = 'Updated Box 1';
+        document.querySelector('#div2').innerText = 'Updated Box 2';
+        document.querySelector('#div3').innerText = 'Updated Box 3';
+        document.querySelector('#div4').innerText = 'Updated Box 4';
+        document.querySelector('#div5').innerText = 'Updated Box 5';
+        document.querySelector('#div6').innerText = 'Updated Box 6';
+        document.querySelector('#div7').innerText = 'Updated Box 7';
+
+        // You can still change the styles as before
+        document.querySelector('#div1').style.color = 'black';
+        document.querySelector('#div1').style.fontSize = '40px';
+        document.querySelector('#div1').style.background = 'Red';
+
+        document.querySelector('#div2').style.color = 'red';
+        document.querySelector('#div2').style.fontSize = '40px';
+        document.querySelector('#div2').style.background = 'Orange';
+
+        document.querySelector('#div3').style.color = 'red';
+        document.querySelector('#div3').style.fontSize = '40px';
+        document.querySelector('#div3').style.background = 'Yellow';
+
+        document.querySelector('#div4').style.color = 'red';
+        document.querySelector('#div4').style.fontSize = '40px';
+        document.querySelector('#div4').style.background = 'Green';
+
+        document.querySelector('#div5').style.color = 'red';
+        document.querySelector('#div5').style.fontSize = '40px';
+        document.querySelector('#div5').style.background = 'Blue';
+
+        document.querySelector('#div6').style.color = 'red';
+        document.querySelector('#div6').style.fontSize = '40px';
+        document.querySelector('#div6').style.background = 'Indigo';
+
+        document.querySelector('#div7').style.color = 'red';
+        document.querySelector('#div7').style.fontSize = '40px';
+        document.querySelector('#div7').style.background = 'Violet';
+
+    </script>
+    
+</body>
+</html>
+
