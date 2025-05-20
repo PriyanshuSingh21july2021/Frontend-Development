@@ -1,0 +1,22 @@
+<!--*****-->
+<html>  
+<body>  
+<canvas id="myCanvas" width="300" height="200" style="border:2px solid;">  
+Your browser does not support the HTML5 canvas tag.  
+</canvas> <br><br><br>
+
+
+<canvas id="myCanvas1" width="500" height="400" style="border:2px solid; overflow: hidden;">
+    Your browser does not support the HTML5 canvas tag.
+  </canvas>
+  <script>
+    var canvas = document.getElementById('myCanvas1');
+    var ctx = canvas.getContext('2d');
+    ctx.font = '20px Arial';
+    ctx.fillText('Hello everyone, my name is Priyansh Kumar Singh.', 10, 190);
+  </script>
+  
+</body>
+</html>  
+<!-- 
+The <canvas> tag is used to draw graphics, on the fly, via scripting (usually JavaScript). -->

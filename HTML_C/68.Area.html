@@ -1,0 +1,24 @@
+<!-- <area>: Defines a clickable area within an image map. -->
+
+    <!DOCTYPE html> 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map Example</title>
+</head>
+<body>
+
+    <h2>Click on different parts of the image to navigate</h2>
+
+    <img src="https://i.pinimg.com/736x/d5/0b/d2/d50bd25b9cc865495b31a97e7a1eed18.jpg" alt="Example Image" usemap="#exampleMap">
+
+    <map name="exampleMap">
+        <area shape="rect" coords="0,0,100,100" href="section1.html" alt="Section 1">
+        <area shape="circle" coords="150,150,50" href="section2.html" alt="Section 2">
+        <area shape="poly" coords="200,50,250,100,200,150,150,100" href="section3.html" alt="Section 3">
+    </map>
+
+</body>
+</html>

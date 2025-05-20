@@ -1,0 +1,43 @@
+<!--*****-->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Set a default font family */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #f0f0f0; /* Set background color */
+        }
+
+        .marquee-container {
+            width: 100%; /* Make the container full width */
+            height: 100px; /* Set the height */
+            overflow: hidden; /* Hide overflow content */
+            border: 2px solid red; /* Add border */
+        }
+
+        .marquee {
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 100%; /* Take full width */
+            height: 100%; /* Take full height */
+            white-space: nowrap; /* Prevent line breaks */
+            animation: marquee-animation 10s linear infinite; /* Apply animation */
+        }
+
+        @keyframes marquee-animation {
+            0% { transform: translateX(100%); } /* Start off screen */
+            100% { transform: translateX(-100%); } /* Move to the left */
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee">
+            HTML CSS JS React Node Express MySQL MongoDB
+        </div>
+    </div>
+</body>
+</html>

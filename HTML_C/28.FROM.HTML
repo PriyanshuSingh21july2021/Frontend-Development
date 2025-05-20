@@ -1,0 +1,132 @@
+<!--*****-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        h2 {
+            color: slateblue;
+            text-align: center; /* Center align the heading */
+            font-family: sans-serif;
+        }
+
+        form {
+            background-color: aqua;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            text-transform: capitalize;
+            padding: 10px;
+            text-align: center;
+            max-width: 600px; /* Set max width for better responsiveness */
+            margin: 0 auto; /* Center the form horizontally */
+        }
+
+        legend {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea,
+        meter {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            border-radius: 5px;
+            background-color: aqua;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            h2 {
+                margin-left: 0; /* Adjust the margin for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form >
+        <fieldset>
+            <legend>Student Details</legend> 
+
+            <label>Enter First Name:</label>
+            <input type="text" name="name" placeholder="Enter First Name" required><br>
+
+            <label>Enter Last Name:</label>
+            <input type="text" name="name" placeholder="Enter Last Name" required><br>
+
+            <label>Enter Email:</label>
+            <input type="email" name="email" placeholder="Enter Email"><br>
+
+            <label>Enter Password:</label>
+            <input type="password" name="pass" placeholder="Enter Password" pattern=".{5,10}"><br>
+
+            <label>Enter Date of Birth:</label>
+            <input type="date" name="dob" placeholder="Enter D.O.B"><br>
+
+            <label>Select Your Gender:</label><br>  
+            <input type="radio" id="gender" name="gender" value="male"/>Male   
+            <input type="radio" id="gender" name="gender" value="female"/>Female   
+            <input type="radio" id="gender" name="gender" value="others"/>Others<br>
+
+            <label>Select Your Hobby:</label>
+            <input type="checkbox">Cricket
+            <input type="checkbox">Hockey
+            <input type="checkbox">Football
+            <input type="checkbox">Tennis
+            <input type="checkbox">Development
+            <input type="checkbox">Kabaddi<br>
+
+            <label>Select Your Country:</label>
+            <select name="country" id="register_country">  
+                <option value="india">India</option>  
+                <option value="pakistan">Pakistan</option>  
+                <option value="africa">Africa</option>  
+                <option value="china">China</option>  
+                <option value="other">Other</option>  
+            </select><br>
+
+            <label>Enter Your Address:</label>  
+            <textarea placeholder="Enter your Address"></textarea><br>
+
+            <label>Rating:</label>
+           <input type="range" value="80" max="100" min="30">
+
+            <button type="submit" onclick="submit">Submit</button>
+            <script>
+                function submit() {
+                    alert("Your form is submitted");
+                }
+            </script>
+        </fieldset>
+    </form>
+</body>
+</html>
+

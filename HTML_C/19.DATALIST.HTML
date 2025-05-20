@@ -1,0 +1,60 @@
+<!--*****-->
+<html>
+  <head>
+    <style>
+      input {
+        border-radius: 7px;
+        width: 140px;
+      }
+      option {
+        color: blue;
+        font-family: sans-serif;
+        font-style: italic;
+        color: aqua;
+      }
+      button {
+        width: 100px;
+        border-radius: 7px;
+        background-color: antiquewhite;
+      }
+    
+
+    </style>
+  </head>
+
+  <body>
+    <label>
+      Enter your favorite cricket player<br />
+      <input  type="text" id="favCktPlayer" list="CktPlayers" placeholder="Select your options"   />
+      <datalist id="CktPlayers">
+        <option value="Sachin Tendulkar"></option>
+        <option value="Brian Lara"></option>
+        <option value="Jacques Kallis"></option>
+        <option value="Ricky Ponting"></option>
+        <option value="Rahul Dravid"></option>
+        <option value="Shane Warne"></option>
+        <option value="Rohit Sharma"></option>
+        <option value="Donald Bradman"></option>
+        <option value="Saurav Ganguly "></option>
+        <option value="AB diVilliers"></option>
+        <option value="Mahendra Singh Dhoni"></option>
+        <option value="Adam Gilchrist"></option>
+      </datalist>
+    </label>
+
+    <br />
+    <br />
+
+    <button onclick="openWikipedia()">Submit</button>
+    <script>
+      function openWikipedia() {
+        alert("Submited")
+      }
+    </script>
+
+
+  </body>
+</html>
+<!-- The <datalist> tag specifies a list of pre-defined options for an <input> element.
+ -->
+
