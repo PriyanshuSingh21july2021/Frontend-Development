@@ -1,0 +1,110 @@
+<!-- ***** -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Object Iteration</title>
+
+
+
+    <script>
+      const a={
+          name:"John",
+          age:30,
+          Gender:'male',
+          userfun:function()
+          {
+              console.log(this)
+
+              console.log(this.name);
+              
+          }
+      }
+      a.userfun();
+  </script>
+
+  
+    <script>
+      // 1. Define an object literal representing a person
+      const person = {
+        name: "Alice",
+        age: 30,
+        occupation: "Engineer",
+      };
+      //update value
+      person.name = "Priyanshu";
+
+      // Delete the 'job' property
+      delete person.age;
+      
+
+      // 2. Accessing properties and calling method of the person object
+      console.log(person.name);
+      console.log(person.age);
+      console.log(person.occupation);
+
+      // 3. nested Object
+      let userDetails = {
+        personalDetails: {
+          firstName: "John",
+          lastName: "Doe",
+          age: 30,
+          gender: "Male",
+          address: {
+            street: "123 Main St",
+            city: "New York",
+            state: "NY",
+            country: "USA",
+          },
+        },
+        academic: {
+          degree: "Bachelor of Science",
+          major: "Computer Science",
+          university: "University of XYZ",
+          graduationYear: 2015,
+        },
+        certifications: [
+          {
+            name: "JavaScript Developer",
+            organization: "ABC Certification Center",
+            year: 2016,
+          },
+          {
+            name: "React.js Developer",
+            organization: "XYZ Certification Institute",
+            year: 2017,
+          },
+        ],
+        workDetails: [
+          {
+            company: "Tech Solutions Inc.",
+            position: "Software Engineer",
+            startDate: "2015-06-01",
+            endDate: "2018-12-31",
+          },
+          {
+            company: "Web Dev Co.",
+            position: "Senior Developer",
+            startDate: "2019-01-01",
+            endDate: "2022-03-15",
+          },
+        ],
+      };
+      userDetails.firstName = "Priyanshu";
+      console.log(userDetails);
+
+      //  property of object
+      Object.seal(userDetails); // now we can't do insertion, deletion operation new data but modification possible
+
+      Object.freeze(userDetails); // make constant data object
+    </script>
+  </head>
+
+  <body>
+    <h2>JavaScript Object Iteration</h2>
+  </body>
+</html>
+
+<!-- ***** -->

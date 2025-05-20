@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Hoisting Examples</title>
+  </head>
+  <body>
+
+    <h2>Example 1: Hoisting with Function and `var`</h2>
+    <script> 
+    // function hoisting
+      sum(10, 6);
+      function sum(a, b) {
+        add = a + b;
+        console.log(add); // Output: 16
+      }
+    </script>
+    
+
+    <h2>Example 2: Hoisting with `var`</h2>
+    <script>
+      // variable hositing
+      console.log(x); // Output: undefined
+      var x = 5;
+    </script>
+
+    <h2>Example 3: Hoisting with Function and `var`</h2>
+    <script>
+      getname(); // Output: Namaste JavaScript
+      console.log(x); // Output: undefined
+        var x = 7;
+      function getname() {
+        console.log("Namaste JavaScript");
+      }
+    </script>
+
+    <h2>Example 4: Hoisting with `let` (ReferenceError)</h2>
+    <script>
+      console.log(y); // ReferenceError: Cannot access 'y' before initialization
+      let y = 10;
+    </script>
+
+    <h2>Example 5: Hoisting with `const` (ReferenceError)</h2>
+    <script>
+      console.log(z); // ReferenceError: Cannot access 'z' before initialization
+      const z = 20;
+    </script>
+
+    <h2>Example 6: Hoisting with Function Expressions and `var`</h2>
+    <script>
+      greet(); // Output: Hello
+
+      function greet() {
+        console.log("Hello");
+      }
+
+      // greetAgain(); // Uncommenting this line will cause a TypeError: greetAgain is not a function
+      var greetAgain = function() {
+        console.log("Hello Again");
+      };
+    </script>
+
+    <h2>Example 7: Hoisting with Function Expressions and `let`</h2>
+    <script>
+      // console.log(foo); // Uncommenting this line will cause a ReferenceError
+      let foo = function() {
+        console.log("Foo");
+      };
+    </script>
+
+    <h2>Example 8: Hoisting with Multiple Declarations (`var`)</h2>
+    <script>
+      var a = 1;
+      console.log(a); // Output: 1
+
+      var a = 2;
+      console.log(a); // Output: 2
+    </script>
+
+    <h2>Example 9: Hoisting with `let` in Block Scope</h2>
+    <script>
+      {
+        console.log(b); // ReferenceError: Cannot access 'b' before initialization
+        let b = 3;
+      }
+    </script>
+
+    <h2>Example 10: Hoisting with `let` and Temporal Dead Zone</h2>
+    <script>
+      let c = 4;
+
+      {
+        // console.log(c); // Uncommenting this line will cause a ReferenceError
+        let c = 5;
+        console.log(c); // Output: 5
+      }
+
+      console.log(c); // Output: 4
+    </script>
+  </body>
+</html>

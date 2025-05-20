@@ -1,0 +1,48 @@
+<!-- ***** -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = () => {
+            let a = 20; // Outer variable 'a'
+    
+            const b = () => {
+                let b = 30; // Inner variable 'b'
+                console.log(a + b); // Can access 'a' from the outer scope (closure)
+                
+                const c = () => {
+                    let c = 30; // Inner variable 'c'
+                    console.log(a + b + c); // Can access 'a' and 'b' from outer scopes (closure)
+                };
+    
+                c(); // Call 'c'
+            };
+            b(); // Call 'b'
+        };
+        a(); // Call 'a'
+    </script>
+    
+</body>
+
+</html>
+
+<!-- ***** -->
+
+
+<!-- Note :
+Lexical scoping in JavaScript means that the scope of a variable is determined by its position in the code.
+ Inner functions can access variables from their outer functions, but outer functions cannot access variables from inner functions.
+
+
+
+ -->
+
+

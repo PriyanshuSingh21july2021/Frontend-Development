@@ -1,0 +1,48 @@
+<!-- *****  -->
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Classes</h1>
+    <p>Creating two car objects from a car class:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      
+      class Car {
+        constructor(name, age, year) {
+          this.name = name;
+          this.age = age;
+          this.year = year;
+        }
+      }
+
+      const myCar1 = new Car("Ford", 21, 2014);
+      const myCar2 = new Car("Audi", 20, 2019);
+
+      console.log(myCar1);
+      console.log(    "Acess data individually :" +myCar1.name +" " +myCar1.age +" " +myCar1.year );
+      console.log(   "Acess data individually :" + myCar2.name +" "+ myCar2.age +" " +myCar2.year );
+    </script>
+
+    <script>
+      class Student {
+        constructor(Name, Age, Course, Branch, Section, Rollno) {
+          this.Name = Name;
+          this.Age = Age;
+          this.Course = Course;
+          this.Branch = Branch;
+          this.Section = Section;
+          this.Rollno = Rollno;
+        }
+      }
+
+      let s1 = new Student("Priyanshu Singh", 21, "B.Tech", "CSE", "CS2", 126);
+      console.log(s1);
+    </script>
+  </body>
+</html>
+
+
+<!-- ***** -->

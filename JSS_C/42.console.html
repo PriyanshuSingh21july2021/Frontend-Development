@@ -1,0 +1,54 @@
+<!-- ***** -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+
+       // This is the most commonly used method to log general information to the console.
+      console.log("Hello, world!");
+
+
+      // Use this method to log errors or critical issues.
+      console.error("Oops! Something went wrong.");
+
+
+      //Use this method to log warnings or potential issues.
+      console.warn("This is a warning. Proceed with caution.");
+
+      // Use this method to log informational messages.
+      console.info("Information: This is an informative message.");
+
+
+      //Use this method to write an error message to the console if the assertion is false. This is commonly used for debugging purposes.
+      console.assert(2 + 2 === 5, "Error: Math is broken!"); // Throws an error
+
+      //Use this method to display tabular data as a table.
+      const data = [
+        { name: "John", age: 30 },
+        { name: "Jane", age: 25 },
+        { name: "Doe", age: 40 }
+      ];
+      console.table(data);
+
+      // Use these methods to group related log statements together.
+
+      console.group("Group name");
+      console.log("Log inside group");
+      console.warn("Warning inside group");
+      console.groupEnd();
+
+
+      // Use this method to count the number of times it has been called with the given label.
+      console.count("Counter"); // Output: Counter: 1
+      console.count("Counter"); // Output: Counter: 2
+    </script>
+  </body>
+</html>
+<!-- ***** -->

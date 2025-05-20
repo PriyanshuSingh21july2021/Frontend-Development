@@ -1,0 +1,86 @@
+<!--*****-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Events Demo</title>
+  </head>
+  <body>
+    <h1>Window Events Demo</h1>
+
+    <p>
+      Open this page in a new window or tab to see some window events in action!
+    </p>
+
+    <script>
+      // Load event
+      window.onload = function () {
+        console.log("Page is loded Sucessfully");
+      };
+
+      // Resize event
+      window.onresize = function () {
+        console.log("Resize window then text is show in console");
+      };
+
+      // Scroll event
+      window.onscroll = function () {
+        console.log("Page scrolled");
+      };
+
+      // Unload event
+      window.onunload = function () {
+        console.log("Page unloaded");
+      };
+
+      // Function to open a new window
+      function openNewWindow() {
+        window.open( "https://www.example.com","_blank","width=500,height=500" );
+      }
+
+      // Function to close the current window
+      function closeWindow() {
+        window.close();
+      }
+    </script>
+
+    <!-- Buttons to trigger window-related actions -->
+    <button onclick="openNewWindow()">Open New Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+  </body>
+</html>
+
+<!--*****-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <button onclick="hello()" style="border-radius: 5px; color: rebeccapurple; background-color: aquamarine;">Jss Compiler</button>
+  <script>
+    window.onload=function myfun()
+    {
+      console.log("Hello")
+    }
+
+
+
+function hello()
+{
+  
+  window.open("https://www.programiz.com/javascript/online-compiler/")
+}
+
+
+  </script>
+  
+</body>
+</html>

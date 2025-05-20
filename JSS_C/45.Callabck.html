@@ -1,0 +1,46 @@
+<!-- ***** -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>JavaScript Functions</h1>
+  <h2>Function Sequence</h2>
+  <p>JavaScript functions are executed in the sequence they are called.</p>
+
+  <p>The result of the calculation is:</p>
+  <p id="demo"></p>
+
+
+  <script>
+    function one(Friend, callback) {
+      console.log("one " + Friend);
+      setTimeout(callback, 2000); // Simulating an asynchronous operation with a 2-second delay
+    }
+
+    function two() {
+      console.log("Priyanshu two");
+    }
+
+    one("Friend's name", two); // calling the one function with two as a callback function
+  </script>
+  
+
+  <script>
+    function add(x, y, answer) {
+      answer(x + y);
+    }
+
+    add(10, 32, function (val) {
+      console.log(val);
+    })
+  </script>
+
+
+</body>
+
+</html>
+
+<!-- Q. Callback function
+A callback is a function passed as an argument to another function -->

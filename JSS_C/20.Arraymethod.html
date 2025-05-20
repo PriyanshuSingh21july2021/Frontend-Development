@@ -1,0 +1,158 @@
+<!--*****-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let arry = ["a", "b", "c", 7, "Undefined"];
+      let arry1 = ["e", "f"];
+
+      // print arry elemnt
+      //    console.log(arry)
+      arry.forEach((ans) => {
+        console.log(ans);
+      });
+
+      /*1. length */
+      console.log("Length :" + arry.length);
+
+      /* 2. push in end */
+      console.log(arry);
+      let pushed = arry.push(20);
+      console.log("Push new element :" + pushed);
+      console.log(arry);
+
+      /* 3. pop in end */
+      let poped = arry.pop();
+      console.log("Pop element :" + poped);
+      console.log(arry);
+
+      /* 4. toString conver arry to string */
+      console.log(arry.toString());
+      console.log(typeof arry);
+
+      /* 5. Concat */
+      console.log(arry.concat(arry1));
+
+      /*5.1 shift - remeove first element of return*/
+      let shited = arry.shift();
+      let unshited = arry.unshift();
+      console.log("Shfit ele element:" + shited, arry);
+      console.log("Shfit ele element:" + unshited, arry);
+
+      /*6. NOTE ->  Map method  */
+      let numb = [1, 2, 3, 4];
+      let mappedArray = numb.map((val) => {
+        return val * 2; // Transforming each element by doubling it
+      });
+      console.log(mappedArray);
+
+      /* 7. join */
+      console.log(arry.toString());
+      console.log("Jion operation : " + arry.join(" and "));
+
+      /* 8.NOTE->  Filter       */
+      let a5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let even = a5.filter((val) => {
+        return val % 2 === 0;
+      });
+      console.log(even);
+
+      /*9. delete */
+      let deleted = delete arry[0];
+      console.log("Delete elment" + deleted, arry);
+
+      /*10.Sort   */
+      let arry3 = [6, 3, 8, 9, 1, 2, 1000, 2000];
+      arry3.sort();
+      console.log("Sort :" + arry3);
+
+      /* 11. reverse */
+      console.log(arry3.reverse());
+
+      /* 12. NOTE-> Slice        */
+
+      let arr4 = [1, 2, 3, 4, "Priyanshu"];
+      let slice = arr4.slice("sliced element:" + 2, 1, "Singh");
+      console.log("Slice" + slicef);
+
+      //13 update arry const varible
+      const arr6 = [1, 2, 3, 4, 5];
+      arr6[0] = 0;
+      console.log("Update const varable :" + arr6);
+
+      // 14 indexof
+      let arr7 = [1, 2, 3, 4, 5];
+      console.log("Index of 1: " + arr7.indexOf(1));
+
+      //15. reduce,every method
+      let numbers = [1, 2, 3, 4, 5];
+
+      // Using reduce to calculate the sum
+      let sum = numbers.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
+
+      //16 find()
+      const number = [5, 12, 8, 130, 44];
+      const found = numbers.find((element) => element > 10);
+      console.log(found); // Output: 12
+
+      console.log(sum); // Output: 15
+    </script>
+  </head>
+
+  <body></body>
+</html>
+
+<!-- ***** -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1000, 20000];
+      let arr1 = [12, 23, 34, 44, 545, 6, 7, 8, 9, 1000, 20000];
+      document.write("Array length: " + arr.length);
+      document.write("<br>");
+      document.write("Array first element: " + arr[0]);
+      document.write("<br>");
+      document.write("Array sort : " + arr.sort());
+      document.write("<br>");
+      document.write("Array reverse : " + arr.reverse());
+      document.write("<br>");
+      document.write("Concat Arry :" + arr.concat(arr1));
+      document.write("<br>");
+      document.write("Indexof check Arry :" + arr.indexOf(1000));
+      document.write("<br>");
+      document.write("toString Arry :" + arr.toString());
+      document.write("<br>");
+      document.write("shift Arry :" + arr.shift(arr1));
+      document.write("<br>");
+
+      let ans = arr.filter((Element) => {
+        return Element % 2 == 0;
+      });
+      document.write("Filter Arry :" + ans);
+
+      document.write("<br>");
+
+      let ans2 = arr.push("Push :" + 20405);
+      document.write(arr);
+
+      document.write("<br>");
+
+      let ans3 = arr.pop();
+      document.write("Pop :" + arr);
+    </script>
+  </body>
+</html>

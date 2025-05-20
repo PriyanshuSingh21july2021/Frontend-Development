@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students = [
+  {
+    id: 1,
+    name: 'Priyanshu',
+    age: 21,
+    course: 'Computer Science',
+  },
+  {
+    id: 2,
+    name: 'Rohit',
+    age: 22,
+    course: 'Mechanical Engineering',
+  },
+  {
+    id: 3,
+    name: 'Sneha',
+    age: 20,
+    course: 'Electrical Engineering',
+  }
+];
+
+// Accessing objects in the array
+console.log(students[0].name);  // Output: Priyanshu
+
+// Iterating over the array of objects
+students.forEach(student => {
+  console.log(`${student.name} is enrolled in ${student.course}`);
+});
+
+    </script>
+    
+</body>
+</html>

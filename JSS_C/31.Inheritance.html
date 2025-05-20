@@ -1,0 +1,55 @@
+
+
+<!-- ***** -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Inheritance Example</h1>
+    <p>Creating a student and college objects:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      // Parent class
+      class Student {
+        constructor(name, gender, age) {
+          this.name = name;
+          this.gender = gender;
+          this.age = age;
+          console.log("Name: " + this.name);
+          console.log("Gender: " + this.gender);
+          console.log("Age: " + this.age);
+        }
+      }
+
+      
+      // Child class inheriting from Student
+      class College extends Student {
+        constructor(name, gender, age, rollno, course, branch, semester, year) {
+          // Call the parent constructor with super()
+          super(name, gender, age);
+          this.rollno = rollno;
+          this.course = course;
+          this.branch = branch;
+          this.semester = semester;
+          this.year = year;
+          console.log("Roll No: " + this.rollno);
+          console.log("Course: " + this.course);
+          console.log("Branch: " + this.branch);
+          console.log("Semester: " + this.semester);
+          console.log("Year: " + this.year);
+        }
+      }
+
+      // Create an object of the child class College
+      const a = new College("Priyanshu", "male", 21, 126, "B.tech", "CS", 6, 2023);
+      console.log(a);
+    </script>
+  </body>
+</html>

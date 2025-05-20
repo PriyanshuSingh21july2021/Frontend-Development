@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    legend {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: calc(100% - 10px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Student Details</legend>
+      <label for="Fname">Enter First Name</label>
+      <input type="text" id="Fname" placeholder="First Name" required />
+      
+      <label for="Lname">Enter Last Name</label>
+      <input type="text" id="Lname" placeholder="Last Name" required />
+
+      <label for="Age">Enter Age</label>
+      <input type="number" id="Age" placeholder="Age" required />
+
+      <label for="email">Enter Email</label>
+      <input type="email" id="email" placeholder="Email" required />
+
+      <label for="password">Enter Password</label>
+      <input type="password" id="password" placeholder="Password" required />
+
+      <label for="Dob">Enter Date of Birth</label>
+      <input type="date" placeholder="Enter Date of Birth" required>  <br> <br> <br>
+
+   <label>Gender:</label>
+      <input type="radio" id="male" name="gender" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" required />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" required />
+      <label for="other">Other</label>
+
+      <input type="submit" value="Submit" />
+    </fieldset>
+  </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--  ***** -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Event Handling Example</title>
+
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        color: black;
+        border: 2px solid;
+        background-color: lightgreen;
+        margin-top: 7px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Corrected all keyboard events -->
+    <div class="box" tabindex="0" onkeydown="myfun('keydown', event)">keydown</div>
+    <div class="box" tabindex="0" onkeypress="myfun('keypress', event)">keypress</div>
+    <div class="box" tabindex="0" onkeyup="myfun('keyup', event)">keyup</div>
+    <div class="box" tabindex="0" onfocus="myfun('focus')">focus</div>
+    <div class="box" tabindex="0" onblur="myfun('blur')">blur</div>
+
+    <script>
+      function myfun() {
+        alert("Keyboad event activited");
+       
+      }
+    </script>
+  </body>
+</html>
+

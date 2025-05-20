@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method Overloading in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      class MathOperations {
+        // Method to perform arithmetic operations
+        operate(a, b, operation) {
+          if (operation === "add") {
+            return a + b;
+          } else if (operation === "subtract") {
+            return a - b;
+          } else if (operation === "multiply") {
+            return a * b;
+          } else {
+            return "Invalid operation";
+          }
+        }
+      }
+
+      // Create an object of MathOperations class
+      const math = new MathOperations();
+
+      // Call the operate method with different operations
+      const additionResult = math.operate(2, 4, "add"); // Output: 6
+      const subtractionResult = math.operate(6, 3, "subtract"); // Output: 3
+      const multiplicationResult = math.operate(2, 3, "multiply"); // Output: 6
+
+      // Display results
+      console.log("Addition Result:", additionResult);
+      console.log("Subtraction Result:", subtractionResult);
+      console.log("Multiplication Result:", multiplicationResult);
+    </script>
+  </body>
+</html>
+<!-- ***** -->

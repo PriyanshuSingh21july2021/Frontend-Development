@@ -1,0 +1,183 @@
+<!-- ***** -->
+
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("one");
+
+      async function two() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve();
+            console.log("Two");
+          }, 5000);
+        });
+      }
+
+
+      async function three() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve();
+            console.log("Code is runnning");
+          }, 4000);
+        });
+      }
+
+
+
+      async function main() {
+        await two();
+        await three();
+        console.log("three");
+      }
+      main();
+    </script>
+  </body>
+</html> 
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getData() {
+            // Simulate fetching data from an asynchronous source
+            return new Promise(resolve ,reject => {
+                setTimeout(() => {
+                    resolve("Data fetched successfully");
+                }, 2000); // Simulating a 2-second delay
+            });
+        }
+
+        async function main(){
+            console.log("Loading modules");
+
+            console.log("Do something else");
+
+            console.log("Load data");
+            
+               let data = await getData();
+              console.log(data);
+
+            console.log("process data");
+           console.log("task 2");
+        }
+
+        main();
+    </script>
+
+
+<script>
+      async function getData() {
+           return new Promise(resolve => {
+               setTimeout(() => {
+                   console.log("Async await function");
+                   resolve("Data from async function"); // Resolve the Promise after the timeout
+               }, 5000);
+           });
+       }
+       
+       async function main() {
+           console.log("Start point");
+           console.log("Middle line");
+           let data = await getData();
+           console.log(data);
+           console.log("Ending line");
+       }
+       
+       main();
+       
+    </script>
+</body>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function execute() {
+            function one() {
+                return new Promise((resolve) => {
+                    setTimeout(function(){
+                        console.log("Select images");
+                        resolve("Selected images");
+                    }, 5000);
+                });
+            }
+
+            function two() {
+                return new Promise((resolve) => {
+                    setTimeout(function(){
+                        console.log("Filter images");
+                        resolve("Filtered images");
+                    }, 4000);
+                });
+            }
+
+            function three() {
+                return new Promise((resolve) => {
+                    setTimeout(function(){
+                        console.log("Caption images");
+                        resolve("Captioned images");
+                    }, 3000);
+                });
+            }
+
+            function four() {
+                return new Promise((resolve) => {
+                    setTimeout(function(){
+                        console.log("Post images");
+                        resolve("Posted images");
+                    }, 2000);
+                });
+            }
+
+            let resultOne = await one();
+            console.log(resultOne);
+
+            let resultTwo = await two();
+            console.log(resultTwo);
+
+            let resultThree = await three();
+            console.log(resultThree);
+
+            let resultFour = await four();
+            console.log(resultFour);
+        }
+
+        execute();
+    </script>
+    
+</body>
+</html> 
+ -->
+
+<!-- ***** -->
+
+
+
+
+

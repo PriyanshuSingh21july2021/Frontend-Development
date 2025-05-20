@@ -1,0 +1,66 @@
+<!-- ***** -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Validation</title>
+<script>
+function validateEmail() {
+
+    const email = document.getElementById('email').value;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (regex.test(email)) {
+        alert("Email is valid");
+    } else {
+        alert("Email is invalid");
+    }
+}
+
+</script>
+</head>
+<body>
+  <label for="email">Enter your email:</label>
+  <input type="text" id="email" name="email">
+  <button onclick="validateEmail()">Validate</button>
+</body>
+</html>
+
+<!-- 
+Note : test() method is a method of the RegExp object, which is used to test a string for a match against a regular expression. 
+-->
+
+<!-- ***** -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById('email').value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(regex.test(email))
+        {
+            alert("Valid");
+        }
+        else{
+            alert("Invalid");
+        }
+
+        }
+    </script>
+</head>
+<body>
+    <label for="email">Enter email</label>
+    <input type="text" id="email"  name="email">
+    <button onclick="validateEmail()">Validate</button>
+    
+</body>
+</html>

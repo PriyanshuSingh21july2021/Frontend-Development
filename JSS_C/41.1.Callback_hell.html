@@ -1,0 +1,186 @@
+<!--*****-->
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+ </head>
+ <body>
+   <script>
+    
+     function one(callback) {
+       setTimeout(function(){
+         console.log("Select images");
+         callback();
+       }, 5000);
+     }
+ 
+     function two(callback) {
+       setTimeout(function(){
+         console.log("Filter images");
+         callback();
+       }, 4000);
+     }
+ 
+     function three(callback) {
+       setTimeout(function(){
+         console.log("Caption of images");
+         callback();
+       }, 3000);
+     }
+ 
+     function four(callback) {
+       setTimeout(function(){
+         console.log("Upload to server");
+         callback();
+       }, 2000);
+     }
+ 
+     function five(callback) {
+       setTimeout(function(){
+         console.log("Successful");
+         callback();
+       }, 1000);
+     }
+ 
+     one(function(){
+       two(function(){
+         three(function(){
+           four(function(){
+             five(function(){
+               console.log("All operations completed successfully.");
+             });
+           });
+         });
+       });
+     });
+   </script>
+ </body>
+ </html> 
+ 
+
+ <!--*****-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+
+    function one(callback)
+    {
+    setTimeout(()=>{
+      console.log("Select images");
+      callback();
+    },5000)
+    }
+
+
+
+    function two(callback)
+    {
+    setTimeout(()=>{
+      console.log("Filter images");
+      callback();
+    },4000)
+    }
+
+
+
+
+    function three(callback)
+    {
+    setTimeout(()=>{
+      console.log("Write posst message");
+      callback();
+    },3000)
+    }
+ 
+
+
+
+
+    function four(callback)
+    {
+    setTimeout(()=>{
+      console.log("upload images");
+      callback();
+    },2000)
+    }
+
+    one(function()
+  {
+    two(function(){
+      three(function(){
+        four(function(){
+          console.log("All tasks completed");
+        })
+      })
+    })
+  })
+
+
+
+  </script>
+  
+ </body>
+ </html>
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Effect - Callback Hell</title>
+    <style>
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, Priyanshu!</h1>
+
+    <script>
+        const h1 = document.querySelector('h1');
+
+        // Callback hell version
+        setTimeout(() => {
+            h1.style.color = 'red';
+            setTimeout(() => {
+                h1.style.color = 'orange';
+                setTimeout(() => {
+                    h1.style.color = 'yellow';
+                    setTimeout(() => {
+                        h1.style.color = 'green';
+                        setTimeout(() => {
+                            h1.style.color = 'blue';
+                            setTimeout(() => {
+                                h1.style.color = 'indigo';
+                                setTimeout(() => {
+                                    h1.style.color = 'violet';
+                                    setTimeout(() => {
+                                        h1.style.color = '';  // Reset to default color
+                                    }, 1000);
+                                }, 1000);
+                            }, 1000);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    </script>
+</body>
+</html>

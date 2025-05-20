@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Comparing alphabetic characters
+      console.log("a" > "b"); // false, because 'a' has a lower Unicode value than 'b'
+      console.log("Z" < "a"); // true, uppercase 'Z' has a lower Unicode value than lowercase 'a'
+
+      // Comparing special characters
+      console.log("@" > "!"); // true, '@' has a higher Unicode value than '!'
+      console.log("#" < "*"); // true, '#' has a lower Unicode value than '*'
+
+      // Comparing alphabetic with special characters
+      console.log("a" > "@"); // true, 'a' has a higher Unicode value than '@'
+
+      // Comparing numbers with strings
+      console.log("5" > "A"); // true, because '5' has a higher Unicode value than 'A'
+      console.log("2" < "@"); // false, '2' has a higher Unicode value than '@'
+    </script>
+  </body>
+</html>

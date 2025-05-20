@@ -1,0 +1,90 @@
+<!-- ***** -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("Start");
+
+      function hello() {
+        setTimeout(() => {
+          console.log("Run after 5 second delay");
+        }, 5000);
+      }
+      // clearTimeout();
+      hello();
+      console.log("End");
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeout Example</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <script>
+      function executeTimeout() {
+        alert("hello");
+        let timeoutId = setTimeout(function () {
+          alert("Priyanshu");
+        }, 5000);
+
+        let userInput = prompt(
+          "Do you want to execute setTimeout? Type 'yes' or 'no'"
+        );
+        if (userInput.toLowerCase() === "no") {
+          clearTimeout(timeoutId);
+          console.log("Timeout cancelled.");
+        } else {
+          console.log("Timeout will be executed.");
+        }
+
+        console.log("Timeout ID:", timeoutId);
+      }
+      executeTimeout();
+    </script>
+
+    <!-- 2 -->
+
+    <script>
+      console.log("Set Time out");
+
+      function setTimeouts() {
+        console.log("Priyanshu Kumar Singh");
+      }
+
+      setTimeout(setTimeouts, 6000);
+    </script>
+
+    <!-- 3 -->
+    <script>
+      console.log("Start");
+      function hello() {
+        console.log("Print delay");
+      }
+
+      setTimeout(hello, 5000);
+      console.log("End");
+    </script>
+
+    <!-- 4 -->
+    <script>
+      console.log("***********Hello***************************");
+      setTimeout(`Setimeout functtion`, 6000);
+
+      console.log("**********Everyone*************************");
+    </script>
+  </body>
+</html>
+
+

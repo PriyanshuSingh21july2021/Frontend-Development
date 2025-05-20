@@ -1,0 +1,69 @@
+
+<!--     ***** -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling Example</title>
+
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        color: black;
+        border: 2px solid;
+        background-color: aqua;
+        margin-top: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    Corrected all events
+    <div class="box" onclick="myfun('onclick')"></div>
+    <div class="box" ondblclick="myfun('ondblclick')"></div>
+    <div class="box" onmousedown="myfun('onmousedown')"></div>
+    <div class="box" onmouseup="myfun('onmouseup')"></div>
+    <div class="box" onmouseover="myfun('onmouseover')"></div>
+    <div class="box" onmouseleave="myfun('onmouseleave')"></div>
+    <div class="box" onmouseout="myfun('onmouseout')"></div>
+
+    <script>
+      function myfun(eventType) {
+        alert("Event triggered: " + eventType);
+      }
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+.box{
+  border: 3px solid black;
+  background-color: aqua;
+  height: 400px;
+  width: 400px;
+}
+  </style>
+</head>
+<body>
+
+<div class="box" onmouseleave="myfun('ondblclick')"></div>
+
+<script>
+  function myfun(eventType)
+  {
+    alert("Event trigger "+eventType)
+  }
+</script>
+  
+</body>
+</html>

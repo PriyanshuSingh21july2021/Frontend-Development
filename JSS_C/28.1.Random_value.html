@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Random Integer</title>
+</head>
+<body>
+    <script>
+        // Generate a random number between 0 and 1
+        let num = Math.random();
+        document.write("Random number (0 to 1): " + num);
+
+        document.write("<br>");
+
+        // Multiply by 10 to get a number between 0 and 10
+        num = num * 10;
+        document.write("Random number (0 to 10): " + num);
+
+        document.write("<br>");
+
+        // Use Math.floor to get an integer value between 0 and 9, then add 1 to make it between 1 and 10
+        let randomInteger = Math.floor(num) + 1;
+        document.write("Random integer (1 to 10): " + randomInteger);
+
+        // Print the integer to the console
+        console.log("Random integer (1 to 10):", randomInteger);
+    </script>
+</body>
+</html>
+<!-- 
+Random function generate value between 0 to 1  but never generate 1-->

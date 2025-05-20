@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      const a1 = () => {
+        let a1 = 20;
+
+        const b = () => {
+          let b = 30;
+          console.log(a1 + b);
+              const c = () => {
+            let c = 30;
+            console.log(a1 + b + c);
+          };
+
+          c();
+        };
+        b();
+      };
+      a1();
+    </script>
+
+
+    <script>
+      const outerfun = (a) => {
+        let b = 20;
+        const innerfun = () => {
+          let c = 30;
+          let sum = a + b + c;
+          console.log(sum);
+        };
+        innerfun(); // Invoke the inner function
+      };
+    
+      outerfun(20); // Call the outer function
+    </script>
+    
+    <script>
+      let a = 10;
+      let add = (b) => {
+        let c = 30;
+    
+        let calculate = () => {
+          let sum = a + b + c;
+          console.log(sum);
+        };
+    
+        calculate();
+        console.log(sum);// not  word 
+      };
+      add(20);
+    </script>
+    
+
+
+
+  </body>
+</html>
+
+<!-- 
+Closure:
+closure in action that is inner function can have acess to the outer function variable/parameter 
+as well as global variable -->
+
+<!-- ***** -->
+
+
+
+
+<!-- Note :
+In closure, we can't use the property of their child, but the child can use your property. Yes/No?"
+
+The answer is YES.
+
+Why?
+A parent function cannot access the variables or properties declared inside its child functions because the child function's scope is local to itself. -->

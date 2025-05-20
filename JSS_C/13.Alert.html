@@ -1,0 +1,49 @@
+<!--     ***** -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        let num1 = prompt("Enter any number");
+        if (num1 % 5 == 0) {
+          alet("Mutiple of 5");
+        } else {
+          alert("Not mltiple of 5");
+        }
+
+      let num = parseInt(prompt("Enter any number"));
+      let count = 0;
+
+      // Loop from 1 to the number itself to check divisors
+      for (let i = 1; i <= num; i++) {
+        if (num % i === 0) {
+          count++; // Increment the count when there's no remainder
+        }
+      }
+
+      // A prime number has exactly two divisors: 1 and the number itself
+      if (count === 2) {
+        alert("Prime");
+      } else {
+        alert("Not Prime");
+      }
+    </script>
+  </head>
+
+  <body>
+    <script>
+      alert("Priyanshu Singh");
+    </script>
+  </body>
+</html>
+
+<!--
+    Q.Alert Box:
+    alert() function to display an alert box with a message to the user. 
+    The alert box typically contains a message and an OK button,
+-->
+
+<!-- ***** -->

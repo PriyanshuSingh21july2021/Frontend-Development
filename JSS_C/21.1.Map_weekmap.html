@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Map: Collection of key-value pairs where keys can be any type (including objects).
+      let map = new Map();
+
+      // Adding key-value pairs to a Map
+      map.set("name", "John"); // String as key
+      map.set(42, "Answer"); // Number as key
+      map.set({ id: 1 }, "Object"); // Object as key
+
+      console.log(map.get("name")); 
+      console.log(map.get(42)); 
+
+      // Iterating over a Map
+      map.forEach((value, key) => {
+        console.log(key, value);
+      });
+
+
+
+      // 2. WeakMap: Similar to Map, but keys must be objects and are weakly referenced.
+      let weakMap = new WeakMap();
+      let obj = { id: 1 };
+
+      // Adding an object as a key to WeakMap
+      weakMap.set(obj, "Some value");
+      console.log(weakMap.get(obj)); // 'Some value'
+
+      // After setting obj = null, it will be garbage-collected
+      obj = null;
+      // Now weakMap no longer holds the reference to the object
+
+
+
+      // 3. Set: Collection of unique values (no duplicates allowed).
+      let set = new Set([1, 2, 2, 3, 4]);
+
+      console.log(set); // Set(4) { 1, 2, 3, 4 } (duplicate '2' is removed)
+
+      // Adding unique values to a Set
+      set.add(5);
+      console.log(set.has(3)); // true (Set contains the value 3)
+      console.log(set.size); // 5 (Set has 5 unique values)
+
+      // Converting an array to a Set to remove duplicates
+      let arr = [1, 2, 2, 3, 4];
+      let uniqueArr = [...new Set(arr)];
+      console.log(uniqueArr); // [1, 2, 3, 4]
+
+
+      
+
+      // 4. WeakSet: Similar to Set, but only stores objects, and the objects are weakly referenced.
+      let weakSet = new WeakSet();
+      let obj1 = { id: 1 };
+      let obj2 = { id: 2 };
+
+      // Adding objects to a WeakSet
+      weakSet.add(obj1);
+      weakSet.add(obj2);
+
+      console.log(weakSet.has(obj1)); // true
+
+      // If the object is no longer referenced, it will be garbage-collected
+      obj1 = null;
+      // WeakSet no longer holds obj1 once garbage collected
+    </script>
+  </body>
+</html>
+
+Map: A Map stores key-value pairs, and the keys can be of any type (primitive or
+object). Allows retrieval, addition, and iteration of key-value pairs. WeakMap:
+A WeakMap is similar to Map, but the keys must be objects. The keys are weakly
+referenced, meaning if the object key is no longer referenced, it will be
+garbage-collected. No iteration is possible in a WeakMap. Set: A Set is a
+collection of unique values, meaning it automatically removes duplicates. Values
+can be of any type (primitive or object). It supports operations like adding
+values, checking if a value exists, and removing duplicates. WeakSet: A WeakSet
+only holds objects as values, and those objects are weakly referenced. Once an
+object inside a WeakSet is no longer referenced anywhere else, it can be
+garbage-collected. No iteration is allowed in a WeakSet.

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules for Identifiers in JavaScript</title>
+</head>
+<body>
+
+    <h1>Rules for Identifiers in JavaScript</h1>
+
+    <h2>Allowed Characters:</h2>
+    <p>Identifiers can consist of letters (both uppercase and lowercase), digits (0-9), underscores (_), and dollar signs ($). Identifiers cannot start with a digit.</p>
+    
+    <ul>
+        <li>✅ Valid: <code>myVar</code>, <code>_value</code>, <code>$price</code></li>
+        <li>❌ Invalid: <code>123abc</code>, <code>9name</code></li>
+    </ul>
+
+    <h2>Case Sensitivity:</h2>
+    <p>JavaScript is case-sensitive, meaning <code>myVar</code> and <code>myvar</code> are considered two different identifiers.</p>
+    
+    <ul>
+        <li>✅ Valid: <code>MyVariable</code>, <code>myVariable</code></li>
+        <li>❌ Invalid: Misuse of case if the identifiers are meant to be the same.</li>
+    </ul>
+
+    <h2>Keywords and Reserved Words:</h2>
+    <p>Identifiers cannot be JavaScript reserved words or keywords (such as <code>var</code>, <code>let</code>, <code>function</code>, <code>class</code>, <code>if</code>, <code>while</code>, etc.).</p>
+    
+    <ul>
+        <li>✅ Valid: <code>myFunction</code>, <code>variableName</code></li>
+        <li>❌ Invalid: <code>function</code>, <code>if</code>, <code>while</code></li>
+    </ul>
+
+    <h2>Unicode Support:</h2>
+    <p>JavaScript identifiers can contain Unicode characters (including non-Latin letters), which allows the use of various language scripts.</p>
+    
+    <ul>
+        <li>✅ Valid: <code>π</code>, <code>变量</code>, <code>élément</code></li>
+        <li>❌ Invalid: Use of symbols like <code>!</code>, <code>@</code>, <code>#</code>, etc.</li>
+    </ul>
+
+    <h2>No Spaces:</h2>
+    <p>Identifiers cannot contain spaces.</p>
+    
+    <ul>
+        <li>✅ Valid: <code>userName</code>, <code>totalAmount</code></li>
+        <li>❌ Invalid: <code>user name</code>, <code>total amount</code></li>
+    </ul>
+
+    <h2>Starting with <code>$</code> or <code>_</code>:</h2>
+    <p>Identifiers can start with a dollar sign (<code>$</code>) or an underscore (<code>_</code>), often used in naming conventions for frameworks or private variables.</p>
+    
+    <ul>
+        <li>✅ Valid: <code>$myVar</code>, <code>_privateVar</code></li>
+        <li>❌ Invalid: <code>var123</code> (starts with a number)</li>
+    </ul>
+
+    <h2>Examples:</h2>
+    <pre><code>
+// Valid identifiers
+let name = "Priyanshu";
+let $price = 100;
+let _counter = 1;
+let π = 3.14;  // Using a Greek letter as an identifier
+
+// Invalid identifiers
+let 123abc;  // Cannot start with a digit
+let var;     // 'var' is a reserved keyword
+let user name;  // Spaces are not allowed
+    </code></pre>
+
+    <h2>Naming Conventions (Best Practices):</h2>
+    <ul>
+        <li><strong>CamelCase</strong> for variables and functions: <code>myVariable</code>, <code>myFunction</code></li>
+        <li><strong>PascalCase</strong> for class names: <code>MyClass</code></li>
+        <li><strong>Uppercase letters</strong> for constants: <code>MAX_VALUE</code></li>
+    </ul>
+
+    <p>Following these rules ensures that your JavaScript code is valid and readable.</p>
+
+</body>
+</html>
